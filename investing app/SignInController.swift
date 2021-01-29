@@ -19,7 +19,17 @@ class SignInController: UIViewController {
         
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "Home" {
+//            guard let vc = segue.destination as? HomeController else { return }
+//            self.present(vc, animated: true)
+//        }
+//    }
+    
     @IBAction private func signInTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "Home") {
+            self.dismiss(animated: true, completion: nil)
+        }
         
     }
     

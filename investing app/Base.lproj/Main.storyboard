@@ -78,11 +78,87 @@
                         <outlet property="emailTF" destination="3yT-Nw-BCu" id="tqy-ht-cix"/>
                         <outlet property="passwordTF" destination="Rbb-i3-Ysc" id="aSU-A6-EDj"/>
                         <outlet property="signInButton" destination="XHG-QH-qN7" id="1BD-D3-eeb"/>
+                        <segue destination="Bko-tB-hnP" kind="show" identifier="Home" id="bf1-gh-bE9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
+        <!--Home Controller-->
+        <scene sceneID="4WC-WC-azy">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="Bko-tB-hnP" customClass="HomeController" customModule="investing_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8zt-3a-roQ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DRb-hG-1ZU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8UD-m0-GaN" kind="relationship" relationship="viewControllers" id="TJE-oY-VPC"/>
+                        <segue destination="GDl-xw-uNh" kind="relationship" relationship="viewControllers" id="eGC-vd-cwK"/>
+                        <segue destination="8Sg-tA-EOj" kind="relationship" relationship="viewControllers" id="n2F-jv-0fb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwp-49-MyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="113"/>
+        </scene>
+        <!--Stocks-->
+        <scene sceneID="MwS-o8-WZu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="GDl-xw-uNh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJ9-QM-p6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x5i-Rf-xlW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stocks" image="dollarsign.square.fill" catalog="system" id="aZG-cw-N4Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSE-HN-d7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="113"/>
+        </scene>
+        <!--Portfolio-->
+        <scene sceneID="aHc-ep-cTE">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="8Sg-tA-EOj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LxF-IM-uUk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CYu-AC-VKa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Portfolio" image="folder.fill" catalog="system" id="bqe-mh-P2a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdF-XT-O7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="605"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="gnc-K8-o0a">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="8UD-m0-GaN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X75-mt-KLe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ijK-LR-EwD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="CJK-hJ-uXH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpW-ND-M2B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-319"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="dollarsign.square.fill" catalog="system" width="128" height="114"/>
+        <image name="folder.fill" catalog="system" width="128" height="95"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
 </document>
