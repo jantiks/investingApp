@@ -18,42 +18,34 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
         tableview.dataSource = self
     }
     
-    //number of section
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
-    }
-    
     //returns rows in each section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 2 {
-            return 5
-        }
-        return 1
+        return 3
     }
     
     //tableview cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        if indexPath.section == 2 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StockCell
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Balance", for: indexPath) as? BalanceCell else { fatalError("couldn't load cell") }
+            return cell
+            
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? StockCell else { fatalError("couldn't load cell") }
+            cell.stockName = "Bitcoin"
+            cell.stockPrice = "$200"
+            print(cell.stockName)
             return cell
         }
-        cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        return cell
-        
+                
     }
     
-    //headers for sections
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "My Balance"
-        } else if section == 1 {
-            return "Free Money"
+    //tableview cell row height
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 150
         }
-        return "Stocks"
+        return 50
     }
-    
     
 
 }

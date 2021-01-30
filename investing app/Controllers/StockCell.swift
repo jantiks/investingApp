@@ -10,12 +10,12 @@ import UIKit
 
 class StockCell: UITableViewCell {
     // instance variables
-    var stockImage = UIImageView()
-    var stockName = UILabel()
-    var stockPrice = UILabel()
+    var stockImage = UIImage()
+    var stockName = ""
+    var stockPrice = ""
     
     // stockImage sizes
-    private let stockImageWidth = 40
+    let stockImageWidth = 40
     private let stockImageHeight = 40
     
     // stockImage constraints
@@ -29,44 +29,49 @@ class StockCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // setting cell components
-        stockImage.image = UIImage(systemName: "house")
-        stockImage.bounds.size = CGSize(width: stockImageWidth, height: stockImageHeight)
-        stockImage.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stockImage)
-        
-        stockName.text = "Bitcoin"
-        stockName.font = UIFont.systemFont(ofSize: 20)
-        stockName.textColor = .white
-        stockName.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stockName)
-        
-        stockPrice.text = "20$"
-        stockPrice.font = UIFont.systemFont(ofSize: 20)
-        stockPrice.textColor = .white
-        stockPrice.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(stockPrice)
-        
-        //activateing constraints
-        NSLayoutConstraint.activate([
-            //stock image
-            stockImage.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: stockImageLeading),
-            stockImage.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0),
-            
-            //stock name
-            stockName.leadingAnchor.constraint(equalTo: stockImage.layoutMarginsGuide.leadingAnchor, constant: stockNameLeading),
-            stockName.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0),
-            
-            //stock price
-            stockPrice.trailingAnchor.constraint(equalTo: self.layoutMarginsGuide.trailingAnchor, constant: stockPriceTrailing),
-            stockPrice.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0)])
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        //initialazing views
+        let imageView = UIImageView()
+        let name = UILabel()
+        let price = UILabel()
+        
+        // setting cell components
+        imageView.image = stockImage
+        imageView.bounds.size = CGSize(width: stockImageWidth, height: stockImageHeight)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(imageView)
+        
+        name.text = stockName
+        name.font = UIFont.systemFont(ofSize: 20)
+        name.textColor = .white
+        name.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(name)
+        
+        price.text = stockPrice
+        price.font = UIFont.systemFont(ofSize: 20)
+        price.textColor = .white
+        price.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(price)
+        
+        //activateing constraints
+        NSLayoutConstraint.activate([
+            //stock image
+            imageView.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: stockImageLeading),
+            imageView.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0),
+            
+            //stock name
+            name.leadingAnchor.constraint(equalTo: imageView.layoutMarginsGuide.leadingAnchor, constant: stockNameLeading),
+            name.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0),
+            
+            //stock price
+            price.trailingAnchor.constraint(equalTo: self.layoutMarginsGuide.trailingAnchor, constant: stockPriceTrailing),
+            price.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor, constant: 0)])
+        
     }
 
 }
