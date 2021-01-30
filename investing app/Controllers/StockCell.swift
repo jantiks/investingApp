@@ -40,7 +40,7 @@ class StockCell: UITableViewCell {
         let name = UILabel()
         let price = UILabel()
         
-        // setting cell components
+        // configuring cell components
         imageView.image = stockImage
         imageView.bounds.size = CGSize(width: stockImageWidth, height: stockImageHeight)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +58,7 @@ class StockCell: UITableViewCell {
         price.translatesAutoresizingMaskIntoConstraints = false
         addSubview(price)
         
-        //activateing constraints
+        //activating constraints
         NSLayoutConstraint.activate([
             //stock image
             imageView.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: stockImageLeading),

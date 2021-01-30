@@ -27,6 +27,8 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "Balance", for: indexPath) as? BalanceCell else { fatalError("couldn't load cell") }
+            cell.amount = "12000$"
+            cell.title = "Balance"
             return cell
             
         } else {
