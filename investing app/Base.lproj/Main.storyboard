@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Home Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="4WC-WC-azy">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="Bko-tB-hnP" customClass="HomeController" customModule="investing_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="Bko-tB-hnP" customClass="TabBarController" customModule="investing_app" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8zt-3a-roQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DRb-hG-1ZU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -126,18 +126,51 @@
         <!--Portfolio-->
         <scene sceneID="aHc-ep-cTE">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="8Sg-tA-EOj" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="8Sg-tA-EOj" customClass="PortfolioController" customModule="investing_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LxF-IM-uUk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bvq-Go-Hwd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="DHF-Cq-Jzd" customClass="StockCell" customModule="investing_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DHF-Cq-Jzd" id="RxC-6g-brd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Sg-tA-EOj" id="ADj-PQ-MLg"/>
+                                    <outlet property="delegate" destination="8Sg-tA-EOj" id="ues-jw-9sY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bvq-Go-Hwd" firstAttribute="bottom" secondItem="CYu-AC-VKa" secondAttribute="bottom" id="Ylr-wJ-GhS"/>
+                            <constraint firstItem="Bvq-Go-Hwd" firstAttribute="trailing" secondItem="CYu-AC-VKa" secondAttribute="trailing" id="qqU-ba-mbv"/>
+                            <constraint firstItem="Bvq-Go-Hwd" firstAttribute="top" secondItem="CYu-AC-VKa" secondAttribute="top" id="vgE-kt-PX7"/>
+                            <constraint firstItem="Bvq-Go-Hwd" firstAttribute="leading" secondItem="CYu-AC-VKa" secondAttribute="leading" id="wx8-qa-rxM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CYu-AC-VKa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Portfolio" image="folder.fill" catalog="system" id="bqe-mh-P2a"/>
+                    <connections>
+                        <outlet property="tableview" destination="Bvq-Go-Hwd" id="24F-f6-E6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdF-XT-O7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="605"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="604.6875"/>
         </scene>
         <!--Home-->
         <scene sceneID="gnc-K8-o0a">
