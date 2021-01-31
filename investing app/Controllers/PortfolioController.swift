@@ -31,6 +31,11 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.title = "Balance"
             return cell
             
+        } else if indexPath.row == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Balance", for: indexPath) as? BalanceCell else { fatalError("couldn't load cell") }
+            cell.amount = "5000$"
+            cell.title = "Free Money"
+            return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? StockCell else { fatalError("couldn't load cell") }
             cell.stockName = "Bitcoin"
@@ -43,10 +48,10 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //tableview cell row height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.row == 0 || indexPath.row == 1{
             return 150
         }
-        return 50
+        return 60
     }
     
 

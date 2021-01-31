@@ -45,14 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9812DE4825C5DDB400744D2E /* PortfolioController cells */ = {
+			isa = PBXGroup;
+			children = (
+				9812DE4625C5CB9100744D2E /* BalanceCell.swift */,
+				98B47A5025C5863C005708D6 /* StockCell.swift */,
+			);
+			path = "PortfolioController cells";
+			sourceTree = "<group>";
+		};
 		98D7A33B25C4722400577A39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				98DAF55525C461CE00CC577A /* SignInController.swift */,
 				98D7A33925C46A4200577A39 /* TabBarController.swift */,
 				98D7A33C25C476E800577A39 /* PortfolioController.swift */,
-				9812DE4625C5CB9100744D2E /* BalanceCell.swift */,
-				98B47A5025C5863C005708D6 /* StockCell.swift */,
+				9812DE4825C5DDB400744D2E /* PortfolioController cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
