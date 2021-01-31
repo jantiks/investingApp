@@ -14,14 +14,14 @@ class BalanceCell: UITableViewCell {
     var amount = ""
     
     //titleLabel font size
-    private let titleLabelFontSize: CGFloat = 20
+    private let titleLabelFontSize: CGFloat = 30
     
     //titleLabel leading constraints sizes
     private let titleLabelLeading: CGFloat = 20
     private let titleLabelTop: CGFloat = 20
     
     //amountLabel font size
-    private let amountLabelFontSize: CGFloat = 50
+    private let amountLabelFontSize: CGFloat = 25
     
     //amountLabel leading constraints sizes
     private let amountLabelLeading: CGFloat = 20

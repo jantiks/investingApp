@@ -14,13 +14,18 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setting navigation controller
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font: UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .caption1), size: 25)]
+        navigationItem.title = "Portfolio"
+        
         tableview.delegate = self
         tableview.dataSource = self
     }
     
     //returns rows in each section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 15
     }
     
     //tableview cells
@@ -49,7 +54,7 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
     //tableview cell row height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 || indexPath.row == 1{
-            return 150
+            return 100
         }
         return 60
     }
