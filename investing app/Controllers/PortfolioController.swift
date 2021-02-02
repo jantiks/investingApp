@@ -21,6 +21,8 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.tableFooterView = UIView(frame: .zero)
+        tableview.estimatedRowHeight = UITableView.automaticDimension
     }
     
     //returns rows in each section
@@ -53,10 +55,7 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //tableview cell row height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 || indexPath.row == 1{
-            return 100
-        }
-        return 60
+        return UITableView.automaticDimension
     }
     
 

@@ -40,17 +40,12 @@ class BalanceCell: UITableViewCell {
         let amountLabel = UILabel()
         
         // configuring cell components
-        titleLabel.text = title
-        titleLabel.font = UIFont.systemFont(ofSize: titleLabelFontSize)
-        titleLabel.textColor = .white
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(titleLabel)
+        //configuring titleLabel
+        configureLabel(label: titleLabel, text: title)
         
-        amountLabel.text = amount
-        amountLabel.font = UIFont.systemFont(ofSize: amountLabelFontSize)
-        amountLabel.textColor = .white
-        amountLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(amountLabel)
+        //configuring amountLabel
+        configureLabel(label: amountLabel, text: amount)
+        
         
         //activating constraints
         NSLayoutConstraint.activate([
@@ -63,6 +58,15 @@ class BalanceCell: UITableViewCell {
             amountLabel.topAnchor.constraint(equalTo: titleLabel.layoutMarginsGuide.bottomAnchor, constant: amountLabelTop)
             
         ])
+    }
+    
+    // configures passed label
+    private func configureLabel(label: UILabel, text: String) {
+        label.text = text
+        label.font = UIFont.systemFont(ofSize: titleLabelFontSize)
+        label.textColor = .lightGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(label)
     }
 
 }
