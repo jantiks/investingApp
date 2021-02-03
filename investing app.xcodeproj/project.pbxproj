@@ -55,6 +55,15 @@
 			path = "PortfolioController cells";
 			sourceTree = "<group>";
 		};
+		9847C30025CADD2300D3AD93 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				98B47A5025C5863C005708D6 /* StockCell.swift */,
+				9812DE4825C5DDB400744D2E /* PortfolioController cells */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		98D7A33B25C4722400577A39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +71,7 @@
 				98D7A33925C46A4200577A39 /* TabBarController.swift */,
 				98D7A33C25C476E800577A39 /* PortfolioController.swift */,
 				985C43D725C7291900A43C69 /* StockController.swift */,
-				98B47A5025C5863C005708D6 /* StockCell.swift */,
-				9812DE4825C5DDB400744D2E /* PortfolioController cells */,
+				9847C30025CADD2300D3AD93 /* cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

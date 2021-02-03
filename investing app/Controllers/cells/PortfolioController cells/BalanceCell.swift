@@ -38,35 +38,37 @@ class BalanceCell: UITableViewCell {
 
         let titleLabel = UILabel()
         let amountLabel = UILabel()
+        let stackView = UIStackView()
         
         // configuring cell components
         //configuring titleLabel
-        configureLabel(label: titleLabel, text: title)
-        
+        configureLabel(label: titleLabel, text: title, color: .lightGray)
+        stackView.addArrangedSubview(titleLabel)
         //configuring amountLabel
-        configureLabel(label: amountLabel, text: amount)
-        
+        configureLabel(label: amountLabel, text: amount, color: .white)
+        stackView.addArrangedSubview(amountLabel)
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        self.addSubview(stackView)
         
         //activating constraints
         NSLayoutConstraint.activate([
-        //titleLabel
-            titleLabel.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: titleLabelLeading),
-            titleLabel.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: titleLabelTop),
-        
-        //amount label
-            amountLabel.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: amountLabelLeading),
-            amountLabel.topAnchor.constraint(equalTo: titleLabel.layoutMarginsGuide.bottomAnchor, constant: amountLabelTop)
-            
+ 
+            stackView.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: titleLabelLeading),
+            stackView.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor),
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.topAnchor, constant: 5),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.bottomAnchor, constant: 5)
         ])
     }
     
     // configures passed label
-    private func configureLabel(label: UILabel, text: String) {
+    private func configureLabel(label: UILabel, text: String, color: UIColor) {
         label.text = text
         label.font = UIFont.systemFont(ofSize: titleLabelFontSize)
-        label.textColor = .lightGray
+        label.textColor = color
         label.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(label)
     }
 
 }

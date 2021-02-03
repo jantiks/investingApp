@@ -39,6 +39,7 @@ class StockCell: UITableViewCell {
         let imageView = UIImageView()
         let name = UILabel()
         let price = UILabel()
+        let stackView = UIStackView()
         
         // configuring cell components
         imageView.image = stockImage
@@ -57,6 +58,8 @@ class StockCell: UITableViewCell {
         price.textColor = .white
         price.translatesAutoresizingMaskIntoConstraints = false
         addSubview(price)
+        
+        
         
         //activating constraints
         NSLayoutConstraint.activate([
