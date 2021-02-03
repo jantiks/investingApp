@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9812DE4725C5CB9100744D2E /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812DE4625C5CB9100744D2E /* BalanceCell.swift */; };
+		9847C30225CAF2B900D3AD93 /* DetailStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847C30125CAF2B900D3AD93 /* DetailStockController.swift */; };
 		985C43D825C7291900A43C69 /* StockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C43D725C7291900A43C69 /* StockController.swift */; };
 		98B47A5125C5863C005708D6 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B47A5025C5863C005708D6 /* StockCell.swift */; };
 		98D7A33A25C46A4200577A39 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7A33925C46A4200577A39 /* TabBarController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		9812DE4625C5CB9100744D2E /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
+		9847C30125CAF2B900D3AD93 /* DetailStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStockController.swift; sourceTree = "<group>"; };
 		985C43D725C7291900A43C69 /* StockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockController.swift; sourceTree = "<group>"; };
 		98B47A5025C5863C005708D6 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		98D7A33925C46A4200577A39 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				98D7A33925C46A4200577A39 /* TabBarController.swift */,
 				98D7A33C25C476E800577A39 /* PortfolioController.swift */,
 				985C43D725C7291900A43C69 /* StockController.swift */,
+				9847C30125CAF2B900D3AD93 /* DetailStockController.swift */,
 				9847C30025CADD2300D3AD93 /* cells */,
 			);
 			path = Controllers;
@@ -189,6 +192,7 @@
 				98D7A33A25C46A4200577A39 /* TabBarController.swift in Sources */,
 				98D7A33D25C476E800577A39 /* PortfolioController.swift in Sources */,
 				98B47A5125C5863C005708D6 /* StockCell.swift in Sources */,
+				9847C30225CAF2B900D3AD93 /* DetailStockController.swift in Sources */,
 				98DAF55625C461CE00CC577A /* SignInController.swift in Sources */,
 				98F1A03B25C302E2002E614D /* AppDelegate.swift in Sources */,
 				9812DE4725C5CB9100744D2E /* BalanceCell.swift in Sources */,

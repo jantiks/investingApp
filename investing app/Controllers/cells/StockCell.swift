@@ -39,7 +39,6 @@ class StockCell: UITableViewCell {
         let imageView = UIImageView()
         let name = UILabel()
         let price = UILabel()
-        let stackView = UIStackView()
         
         // configuring cell components
         imageView.image = stockImage

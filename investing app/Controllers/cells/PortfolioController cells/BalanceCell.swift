@@ -58,8 +58,8 @@ class BalanceCell: UITableViewCell {
  
             stackView.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: titleLabelLeading),
             stackView.centerYAnchor.constraint(equalTo: self.layoutMarginsGuide.centerYAnchor),
-            stackView.topAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.topAnchor, constant: 5),
-            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.bottomAnchor, constant: 5)
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.topAnchor, constant: 0),
+            stackView.bottomAnchor.constraint(greaterThanOrEqualTo: self.layoutMarginsGuide.bottomAnchor, constant: 0)
         ])
     }
     

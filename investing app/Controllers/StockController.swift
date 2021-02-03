@@ -33,6 +33,13 @@ class StockController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("passed")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailStockController else { return }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     
 
 }

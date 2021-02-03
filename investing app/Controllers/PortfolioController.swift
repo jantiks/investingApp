@@ -21,6 +21,8 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.isUserInteractionEnabled = true
+        tableview.allowsSelection = true
         tableview.tableFooterView = UIView(frame: .zero)
         tableview.estimatedRowHeight = UITableView.automaticDimension
     }
@@ -47,10 +49,16 @@ class PortfolioController: UIViewController, UITableViewDelegate, UITableViewDat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? StockCell else { fatalError("couldn't load cell") }
             cell.stockName = "Bitcoin"
             cell.stockPrice = "$200"
-            print(cell.stockName)
             return cell
         }
-                
+         
+    }
+    
+    // when row is selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("passed")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailStockController else { return }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     //tableview cell row height
